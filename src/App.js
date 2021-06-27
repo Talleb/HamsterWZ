@@ -15,7 +15,7 @@ function App() {
       <nav>
     <Link to="/"> Home </Link>
 		<Link to="/battle"> Battle </Link>
-		<Link to="/stats"> Statistics </Link>
+		<Link to="/stats"> Stats </Link>
 		<Link to="/matchup"> Match </Link>
 		<Link to="/upload"> Upload </Link>
     </nav>
