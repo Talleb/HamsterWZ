@@ -79,7 +79,9 @@ export const LatestGames = () => {
     }, [])
 
     return (
-        <div className="LatestGame"> {gamesData ? <TableContainer component={Paper}>
+        <div className="LatestGame"> 
+        <h1>Totalt spelade matcher: {gamesData.games.length}</h1>
+        {/* {gamesData ? <TableContainer component={Paper}>
             <h1>Totalt spelade matcher: {gamesData.games.length}</h1>
             <Table className={classes.table} size="small" aria-label="a dense table">
                 <TableHead>
@@ -92,9 +94,9 @@ export const LatestGames = () => {
                 </TableHead>
                 <TableBody>
                     {gamesData.games.map((row) => (
-                        <TableRow key={row.timeStamp} >
+                        <TableRow>
                             <TableCell component="th" scope="row" >
-                                {row.timeStamp} 
+                                {row?.timeStamp} 
                             </TableCell>
                             <TableCell align="right">{row?.player1?.name}</TableCell>
                             <TableCell align="right">{row?.player2?.name}</TableCell>
@@ -103,7 +105,7 @@ export const LatestGames = () => {
                     ))}
                 </TableBody>
             </Table>
-        </TableContainer> : 'no data'}
+        </TableContainer> : 'no data'} */}
         </div>
     );
 }
