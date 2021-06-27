@@ -38,7 +38,7 @@ function App() {
           </div>
           </Route>
           <Route path="/stats"> 
-        <LoserBoard/>
+        {/* <LoserBoard/> */}
         <LeaderBoard/>
          </Route>
          <Route path="/matchup/:id1/:id2"> 
