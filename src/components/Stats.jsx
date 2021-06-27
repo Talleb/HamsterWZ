@@ -24,12 +24,15 @@ export const LastGame = ({showWinner}) => {
     const [lastGameData, setLastGameData] = useState(null);
     const classes = useStyles();
 
+    console.log("url",url)
+
     useEffect(() => {
         async function fetchData() {
             const response = await fetch(url);
             const json = await response.json();
             setLastGameData({ games: json });
-    
+            console.log("json", json)
+            console.log("lastGameData", lastGameData)
         }
         fetchData();
     }, [url])
@@ -69,7 +72,8 @@ export const LatestGames = () => {
             const response = await fetch(url);
             const json = await response.json();
             setGamesData({ games: json });
-    
+    console.log("json", json)
+    console.log("gamesData", gamesData)
         }
         fetchData();
     }, [])
