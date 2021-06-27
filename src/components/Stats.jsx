@@ -150,8 +150,8 @@ export const LeaderBoard = () => {
             </Table>
         </TableContainer> : 'no data'}
         <div>
-            {/* <LastGame/> */}
-            <LatestGames/>
+            <LastGame/>
+            {/* <LatestGames/> */}
         </div>
         </div>
     );
