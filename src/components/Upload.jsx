@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom';
 const Upload = () => {
     const history = useHistory();
     // const url = '/api/hamsters';
-    const url = 'http://localhost:3000/hamsters'
+    const url = '/api/hamsters'
     const [id, setId] = useState('');
     const [name, setName] = useState('');
     const [age, setAge] = useState('');
@@ -31,7 +31,7 @@ const Upload = () => {
             defeats: 0
         }
         // const url = '/api/hamsters'
-        const url = 'http://localhost:3000/hamsters'
+        const url = '/api/hamsters'
         const response = await fetch(url, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },

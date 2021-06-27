@@ -26,8 +26,7 @@ const Wrapper = withStyles({
     console.log('winner', ResolvedWinner)
     console.log('Loser', ResolvedLoser)
 
-    // const url = '/api/games'
-    const url = 'http://localhost:3000/games'
+    const url = '/api/games'
     const response = await fetch(url, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -44,8 +43,7 @@ async function updateLoser(loser) {
         "defeats": +1,
         "games": +1
     }
-    // const url = `/api/hamsters/${loser.id}/result`
-    const url = `http://localhost:3000/hamsters/${loser.id}/result`
+    const url = `/api/hamsters/${loser.id}/result`
     const response = await fetch(url, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
@@ -59,8 +57,7 @@ async function updateWinner(winner) {
         "defeats": +0,
         "games": +1
     }
-    // const url = `/api/hamsters/${winner.id}/result`
-    const url = `http://localhost:3000/hamsters/${winner.id}/result`
+    const url = `/api/hamsters/${winner.id}/result`
     const response = await fetch(url, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
@@ -74,9 +71,9 @@ const GetHamsterOne = ({hamster1, setHamster1}) => {
     let url = null
 
     if (id1 === undefined) {
-        url = 'http://localhost:3000/hamsters/random'
+        url = '/api/hamsters/random'
     } else {
-        url = `http://localhost:3000/hamsters/${id1}`
+        url = `/api/hamsters/${id1}`
     }
 
     useEffect(() => {
@@ -101,9 +98,9 @@ const GetHamsterTwo = ({hamster2, setHamster2}) => {
     let url = null
 
     if (id2 === undefined) {
-        url = 'http://localhost:3000/hamsters/random'
+        url = '/api/hamsters/random'
     } else {
-        url = `http://localhost:3000/hamsters/${id2}`
+        url = `/api/hamsters/${id2}`
     }
 
     useEffect(() => {

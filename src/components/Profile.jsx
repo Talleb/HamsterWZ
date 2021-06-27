@@ -21,7 +21,7 @@ const Profile = ({Hamster}) =>{
         <CardMedia
           component="img"
           height="300"
-          image={`http://localhost:3000/assets/${Hamster.image}`}
+          image={`/api/assets/${Hamster.image}`}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">

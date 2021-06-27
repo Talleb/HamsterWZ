@@ -20,7 +20,7 @@ const useStyles = makeStyles({
 export const LastGame = ({showWinner}) => {
     const { id1, id2 } = useParams();
     const specific = id1 === undefined ? false : true
-    const url = specific === true ? `http://localhost:3000/games/${id1}/${id2}` : 'http://localhost:3000/games/last';
+    const url = specific === true ? `/api/games/${id1}/${id2}` : '/api/games/last';
     const [lastGameData, setLastGameData] = useState(null);
     const classes = useStyles();
 
@@ -61,7 +61,7 @@ return (
 
 
 export const LatestGames = () => {
-    const url = 'http://localhost:3000/games';
+    const url = '/api/games';
     const [gamesData, setGamesData] = useState(null);
     const classes = useStyles();
     useEffect(() => {
@@ -105,7 +105,7 @@ export const LatestGames = () => {
 }
 
 export const LeaderBoard = () => {
-    const url = 'http://localhost:3000/charts/top';
+    const url = '/api/charts/top';
     const [data, setData] = useState(null);
     const classes = useStyles();
     useEffect(() => {
@@ -154,7 +154,7 @@ export const LeaderBoard = () => {
 }
 
 export const LoserBoard = () => {
-    const url = 'http://localhost:3000/charts/bottom';
+    const url = '/api/charts/bottom';
     const [data, setData] = useState(null);
     const classes = useStyles();
     useEffect(() => {
