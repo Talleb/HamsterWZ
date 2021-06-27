@@ -9,7 +9,7 @@ app.use(express.json());
 
 
 
-app.use(express.stati(__dirname + '/../build'));
+app.use(express.static(__dirname + '/../build'));
 app.use('/assets', express.static(__dirname + '/hamsters'));
 
 
