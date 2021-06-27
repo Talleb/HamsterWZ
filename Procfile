@@ -1,2 +1,2 @@
-elease: npm run build
+release: npm run build
 web: node server/index.js

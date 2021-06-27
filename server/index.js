@@ -9,8 +9,7 @@ app.use(express.json());
 
 
 
-// Använd static middleware för att serva de byggda frontend-app-filernaapp.use(express.static(__dirname + '/../build'));
-
+app.use(express.stati(__dirname + '/../build'));
 app.use('/assets', express.static(__dirname + '/hamsters'));
 
 
