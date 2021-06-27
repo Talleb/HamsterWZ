@@ -92,7 +92,7 @@ export const LatestGames = () => {
                 </TableHead>
                 <TableBody>
                     {gamesData.games.map((row) => (
-                        <TableRow key={row.timeStamp._seconds} >
+                        <TableRow key={row.timeStamp} >
                             <TableCell component="th" scope="row" >
                                 {row.timeStamp} 
                             </TableCell>
@@ -151,7 +151,7 @@ export const LeaderBoard = () => {
         </TableContainer> : 'no data'}
         <div>
             <LastGame/>
-            {/* <LatestGames/> */}
+            <LatestGames/>
         </div>
         </div>
     );
