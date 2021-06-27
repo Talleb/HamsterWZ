@@ -92,9 +92,9 @@ export const LatestGames = () => {
                             <TableCell component="th" scope="row" >
                                 {row.timeStamp} 
                             </TableCell>
-                            <TableCell align="right">{row.player1.name}</TableCell>
-                            <TableCell align="right">{row.player2.name}</TableCell>
-                            <TableCell align="right">{row.winner.name}</TableCell>
+                            <TableCell align="right">{row?.player1?.name}</TableCell>
+                            <TableCell align="right">{row?.player2?.name}</TableCell>
+                            <TableCell align="right">{row?.winner?.name}</TableCell>
                         </TableRow>
                     ))}
                 </TableBody>
