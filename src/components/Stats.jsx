@@ -80,7 +80,8 @@ export const LatestGames = () => {
 
     return (
         <div className="LatestGame"> 
-        <h1>Totalt spelade matcher: {gamesData.games.length}</h1>
+        {gamesData ?
+        <h1>Totalt spelade matcher: {gamesData?.games?.length}</h1> : 'nodata'}
         {/* {gamesData ? <TableContainer component={Paper}>
             <h1>Totalt spelade matcher: {gamesData.games.length}</h1>
             <Table className={classes.table} size="small" aria-label="a dense table">
