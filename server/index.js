@@ -1,13 +1,13 @@
 const express = require('express');
 const app = express();
+const cors = require ('cors');
 const serverPort = process.env.PORT || 2048; 
+
+app.use(cors());
 app.use(express.json());
 
-app.use('/', express.static('public'))
-app.use('/assets', express.static('hamsters'))
 
-// Använd static middleware för att serva de byggda frontend-app-filerna
-// Det kan se annorlunda ut om man använder express-router.
+
 app.use(express.static(__dirname + '/../build'));
 
 app.use('/assets', express.static(__dirname + '/hamsters'));
@@ -21,10 +21,10 @@ const gamesRoute = require('./routes/games.js');
 const statsRoute = require('./routes/stats.js');
 
 
-app.use('/hamsters', hamstersRoute);
-app.use('/charts', chartsRoute);
-app.use('/games', gamesRoute);
-app.use('/stats', statsRoute);
+app.use('/api/hamsters', hamstersRoute);
+app.use('/api/charts', chartsRoute);
+app.use('/api/games', gamesRoute);
+app.use('/api/stats', statsRoute);
 
 
 
